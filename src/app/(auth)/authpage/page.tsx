@@ -1,6 +1,9 @@
 "use client";
 
+import EmployeeMessages from "@/components/EmployeeMessages";
+import EmployeeRiskDistribution from "@/components/EmployeeRisk";
 import Sidebar from "@/components/Sidebar";
+import TaxCreditsOverview from "@/components/TaxCreditOverview";
 import { InteractionStatus } from "@azure/msal-browser";
 import { useIsAuthenticated, useMsal } from "@azure/msal-react";
 import { useRouter } from "next/navigation";
@@ -20,8 +23,14 @@ const Page = () => {
   }, [inProgress, isAuthenticated, router]);
 
   return (
-    <div className="">
-      <Sidebar />
+    <div className="flex flex-col md:flex-row max-auto">
+      <div className="flex-1 p-4 space-y-6">
+        <TaxCreditsOverview />
+        <EmployeeRiskDistribution />
+      </div>
+      <div className="p-4">
+        <EmployeeMessages />
+      </div>
     </div>
   );
 };
