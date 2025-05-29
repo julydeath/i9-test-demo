@@ -13,6 +13,7 @@
     "@azure/msal-node": "^3.5.3",
     "@azure/msal-react": "^3.0.12",
     "@microsoft/microsoft-graph-client": "^3.0.7",
+    "lucide-react": "^0.511.0",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
